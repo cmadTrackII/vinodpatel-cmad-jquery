@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cisco.com/cmad/rogastis"
+	xmlns:gl="http://www.cisco.com/cmad/rogastis" elementFormDefault="qualified">
+	<element name="user">
+		<complexType>
+			<sequence>
+				<element name="loginId" type="string" />
+				<element name="password" type="string" />
+				<element name="firstName" type="string" />
+				<element name="lastName" type="string" />
+				<element name="createdOn" type="integer" />
+				<element name="lastLogin" type="integer" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="question">
+		<complexType>
+			<sequence>
+				<element name="questionId" type="integer" />
+				<element name="question" type="string" />
+				<element name="loginId" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="answer">
+		<complexType>
+			<sequence>
+				<element name="answerId" type="integer" />
+				<element name="answer" type="string" />
+				<element name="postedOn" type="integer" />
+				<element name="likes" type="integer" />
+				<element name="dislikes" type="integer" />
+				<element name="loginId" type="string" />
+				<element name="questionId" type="integer" />
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>
